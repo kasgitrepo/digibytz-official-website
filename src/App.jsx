@@ -536,7 +536,7 @@ function App() {
 
                 {activeService.categories && (
                   <div style={{ marginTop: '2rem' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: `repeat(${activeService.categories.length === 3 ? 3 : 2}, 1fr)`, gap: '1rem' }}>
+                    <div className={`responsive-modal-grid ${activeService.categories.length === 3 ? 'cols-3' : 'cols-2'}`}>
                       {activeService.categories.map((cat, idx) => (
                         <div
                           key={idx}
@@ -576,7 +576,7 @@ function App() {
                   <div style={{ marginTop: '3rem' }}>
                     <h3 style={{ fontSize: '1.8rem', textAlign: 'center', marginBottom: '0.5rem', fontFamily: 'var(--font-heading)' }}>Surveillance <span style={{ color: 'var(--color-secondary)' }}>Solutions</span></h3>
                     <p style={{ textAlign: 'center', color: 'var(--text-muted)', marginBottom: '2rem', fontSize: '0.95rem' }}>Smart camera systems tailored to every scale and setup.</p>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }}>
+                    <div className="responsive-modal-grid cols-2">
                       {activeService.surveillance.map((item, idx) => (
                         <div
                           key={idx}
@@ -738,7 +738,7 @@ function App() {
                 {activeService.benefits && (
                   <div style={{ marginTop: '4rem', padding: '3rem 2rem', background: 'var(--bg-dark)', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)' }}>
                     <h3 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '3rem', fontFamily: 'var(--font-heading)' }}>Benefits of Solar</h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+                    <div className="responsive-modal-grid cols-2">
                       {activeService.benefits.map((item, idx) => (
                         <div key={idx} style={{ display: 'flex', gap: '1.25rem', background: 'var(--bg-card)', padding: '1.5rem', borderRadius: '12px', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
                           <div style={{ flexShrink: 0, marginTop: '0.2rem' }}>{item.icon}</div>
@@ -756,7 +756,7 @@ function App() {
                 {activeService.epc && (
                   <div style={{ marginTop: '4rem' }}>
                     <h3 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '3rem', fontFamily: 'var(--font-heading)' }}>What we Offer</h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+                    <div className="responsive-modal-grid cols-3">
                       {activeService.epc.map((item, idx) => (
                         <div key={idx} style={{ background: 'var(--bg-dark)', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
                           <img src={item.img} alt={item.title} style={{ width: '100%', height: '160px', objectFit: 'cover' }} />
@@ -774,7 +774,7 @@ function App() {
                 {activeService.whyChooseUs && (
                   <div style={{ marginTop: '4rem' }}>
                     <h3 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '3rem', fontFamily: 'var(--font-heading)' }}>Why Choose Us</h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+                    <div className="responsive-modal-grid cols-3">
                       {activeService.whyChooseUs.map((item, idx) => (
                         <div key={idx} style={{ background: 'var(--bg-dark)', padding: '2rem', borderRadius: '16px', textAlign: 'center', border: '1px solid rgba(255,255,255,0.05)' }}>
                           <div style={{ display: 'inline-flex', padding: '1rem', background: 'rgba(249, 115, 22, 0.1)', color: 'var(--color-secondary)', borderRadius: '50%', marginBottom: '1.5rem' }}>
@@ -792,7 +792,7 @@ function App() {
                 {activeService.installationProcess && (
                   <div style={{ marginTop: '4rem', padding: '4rem 2rem', background: 'linear-gradient(135deg, #1e3a8a, #3b82f6)', borderRadius: '24px', color: 'white' }}>
                     <h3 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem', color: 'white', fontFamily: 'var(--font-heading)' }}>Our <span style={{ borderBottom: '3px solid var(--color-secondary)' }}>Installation</span> Process</h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
+                    <div className="responsive-modal-grid cols-3">
                       {activeService.installationProcess.map((item, idx) => (
                         <div key={idx} style={{ textAlign: 'center' }}>
                           <div style={{ display: 'inline-flex', padding: '1.5rem', background: 'rgba(255,255,255,0.15)', borderRadius: '50%', marginBottom: '1.5rem', backdropFilter: 'blur(10px)' }}>

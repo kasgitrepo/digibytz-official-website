@@ -629,6 +629,21 @@ html {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.responsive-modal-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .responsive-modal-grid.cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .responsive-modal-grid.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* Category Cards */
 .category-card {
   transition: box-shadow 0.3s ease, border 0.3s ease;
