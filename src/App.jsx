@@ -930,32 +930,32 @@ function App() {
         <div style={{ maxWidth: '800px', margin: '4rem auto 0', padding: '0 1rem', textAlign: 'center' }}>
           <h4 style={{ color: 'white', fontSize: '1.8rem', fontFamily: 'var(--font-heading)', marginBottom: '2.5rem', fontWeight: 'bold' }}>Instant <span className="text-gradient">Connect</span></h4>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', alignItems: 'center' }}>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
-              <span style={{ color: 'white', fontSize: '1.1rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)', minWidth: '320px', textAlign: 'right' }}>Solar Panels:</span>
+            <div className="contact-row">
+              <span className="contact-label">Solar Panels:</span>
               <a href="tel://+9196003097776/" style={{ backgroundColor: 'var(--color-primary)', color: '#111', textDecoration: 'none', fontWeight: '900', display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.6rem 1.5rem', borderRadius: '30px', fontSize: '1.1rem', minWidth: '220px', justifyContent: 'center', transition: 'transform 0.3s' }} onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}>
                 <Phone size={18} color="#111" /> +91 96003 97776
               </a>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
-              <span style={{ color: 'white', fontSize: '1.1rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)', minWidth: '320px', textAlign: 'right' }}>Security Solutions - CCTV:</span>
+            <div className="contact-row">
+              <span className="contact-label">Security Solutions - CCTV:</span>
               <a href="tel://+919150010664/" style={{ backgroundColor: 'var(--color-primary)', color: '#111', textDecoration: 'none', fontWeight: '900', display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.6rem 1.5rem', borderRadius: '30px', fontSize: '1.1rem', minWidth: '220px', justifyContent: 'center', transition: 'transform 0.3s' }} onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}>
                 <Phone size={18} color="#111" /> +91-91500 10664
               </a>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
-              <span style={{ color: 'white', fontSize: '1.1rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)', minWidth: '320px', textAlign: 'right' }}>Inverters and Batteries:</span>
+            <div className="contact-row">
+              <span className="contact-label">Inverters and Batteries:</span>
               <a href="tel://+919600397775/" style={{ backgroundColor: 'var(--color-primary)', color: '#111', textDecoration: 'none', fontWeight: '900', display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.6rem 1.5rem', borderRadius: '30px', fontSize: '1.1rem', minWidth: '220px', justifyContent: 'center', transition: 'transform 0.3s' }} onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}>
                 <Phone size={18} color="#111" /> +91-96003 97775
               </a>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
-              <span style={{ color: 'white', fontSize: '1.1rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)', minWidth: '320px', textAlign: 'right' }}>PCs & Laptops:</span>
+            <div className="contact-row">
+              <span className="contact-label">PCs & Laptops:</span>
               <a href="tel://+919150011907/" style={{ backgroundColor: 'var(--color-primary)', color: '#111', textDecoration: 'none', fontWeight: '900', display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.6rem 1.5rem', borderRadius: '30px', fontSize: '1.1rem', minWidth: '220px', justifyContent: 'center', transition: 'transform 0.3s' }} onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}>
                 <Phone size={18} color="#111" /> +91-91500 11907
               </a>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
-              <span style={{ color: 'white', fontSize: '1.1rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)', minWidth: '320px', textAlign: 'right' }}>Comprehensive IT & Surveillance Services:</span>
+            <div className="contact-row">
+              <span className="contact-label">Comprehensive IT & Surveillance Services:</span>
               <a href="tel://+918098950005/" style={{ backgroundColor: 'var(--color-primary)', color: '#111', textDecoration: 'none', fontWeight: '900', display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.6rem 1.5rem', borderRadius: '30px', fontSize: '1.1rem', minWidth: '220px', justifyContent: 'center', transition: 'transform 0.3s' }} onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}>
                 <Phone size={18} color="#111" /> +91-80989 50005
               </a>
