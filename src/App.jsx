@@ -756,7 +756,7 @@ function App() {
                 {activeService.epc && (
                   <div style={{ marginTop: '4rem' }}>
                     <h3 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '3rem', fontFamily: 'var(--font-heading)' }}>What we Offer</h3>
-                    <div className="responsive-modal-grid cols-3">
+                    <div className="responsive-modal-grid cols-2">
                       {activeService.epc.map((item, idx) => (
                         <div key={idx} style={{ background: 'var(--bg-dark)', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
                           <img src={item.img} alt={item.title} style={{ width: '100%', height: '160px', objectFit: 'cover' }} />
