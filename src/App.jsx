@@ -12,7 +12,7 @@ const servicesData = [
   {
     id: 'solar',
     title: 'Solar Panels',
-    wallpaper: '/Solar Panels_wallpaper.jpg',
+    wallpaper: '/Solar Panels_wallpaper.webp',
     icon: <Sun size={32} />,
     tags: ['Installation', 'Service', 'Sales'],
     shortDesc: 'Premium solar solutions for sustainable and cost-effective energy.',
@@ -21,12 +21,12 @@ const servicesData = [
       {
         title: 'Residential Solar',
         desc: 'We design and install customised rooftop solar systems for homes across India. Our solar solutions help homeowners get direct benefit from government subsidies, reduce electricity bills, and generate clean energy with minimal maintenance and long-term reliability assured.',
-        img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=600'
+        img: '/residentialsolar.webp'
       },
       {
         title: 'Commercial Solar',
         desc: 'We support businesses with scalable solar installations that lower operational costs and improve energy efficiency. Our systems are designed to help companies reduce grid dependence, achieve consistent performance, and enhance sustainability credentials.',
-        img: '/commercial_solar.png'
+        img: '/commercial_solar.webp'
       },
       {
         title: 'Industrial Solar',
@@ -39,17 +39,17 @@ const servicesData = [
       {
         title: 'Engineering',
         desc: 'Our expert team delivers precision-driven solar project design across all scales - from warehouse rooftops to educational facilities. We optimize performance using advanced modeling tailored to solar panels for industrial use and large-scale clean energy initiatives.',
-        img: '/Engineering.PNG'
+        img: '/Engineering.webp'
       },
       {
         title: 'Procurement',
         desc: 'We select high-efficiency technology components ideal for projects like installing solar panel on warehouse rooftop and hybrid applications. Whether you\'re integrating solar into a solar-powered car park lights system or a logistics hub, we ensure reliable and scalable sourcing.',
-        img: '/Procurement.jpeg'
+        img: '/Procurement.webp'
       },
       {
         title: 'Construction',
         desc: 'We specialize in executing complex solar builds for a variety of structures from solar rooftop or car park systems to expansive solar installations across commercial buildings. Each project is delivered with structural integrity, safety compliance, and DPWH-approved engineering practices.',
-        img: '/Construction.jpg'
+        img: '/Construction.webp'
       },
       {
         title: 'Maintenance',
@@ -83,8 +83,8 @@ const servicesData = [
       { step: 4, icon: <Wrench size={32} />, title: 'Ongoing Support & Maintenance', desc: 'Enjoy free preventive maintenance every 4 months, for the first 5 years of your solar system installation. We do monitor your system and offer reliable service whenever needed.' }
     ],
     images: [
-      '/Solar1.jpg',
-      '/Solar2.jpeg'
+      '/Solar1.webp',
+      '/Solar2.webp'
     ],
     reviews: [
       { id: 's1', name: 'Ravi T.', initial: 'R', text: 'Outstanding solar installation! Our power bills have dropped significantly. Very professional team.' },
@@ -97,7 +97,7 @@ const servicesData = [
   {
     id: 'cctv',
     title: 'Security Solutions - CCTV',
-    wallpaper: '/Security Solutions - CCTV_wallpaper.jpg',
+    wallpaper: '/Security Solutions - CCTV_wallpaper.webp',
     icon: <Shield size={32} />,
     tags: ['Installation', 'Service', 'Sales'],
     shortDesc: 'Advanced surveillance systems to keep your premises secure 24/7.',
@@ -107,26 +107,26 @@ const servicesData = [
         title: 'Intelligent Camera Solutions',
         subtitle: '(1–2 Cameras)',
         usedFor: ['Solar Camera', '4G Camera', 'WiFi Camera'],
-        img: '/cctv_type1.jpg'
+        img: '/cctv_type1.webp'
       },
       {
         title: 'Advanced Multi-Camera Systems',
         subtitle: '(More than 2 Cameras)',
         usedFor: ['Analog', 'Normal', 'HD', 'Hybrid', 'IP', 'IP (Pro)', 'Hybrid 360° Rotating'],
-        img: '/cctv_type2.jpg'
+        img: '/cctv_type2.webp'
       }
     ],
     trustedBrands: [
-      { name: 'Hikvision', logo: '/Hikvision-Logo.png' },
-      { name: 'CP Plus', logo: '/cpplus_logo.png' },
-      { name: 'Dahua Technology', logo: '/dahua_logo.png' },
-      { name: 'UNV (Uniview)', logo: '/uniview_logo.png' },
-      { name: 'Prama', logo: '/prama_logo' },
-      { name: 'High Focus', logo: '/highfocus_logo.png' },
+      { name: 'Hikvision', logo: '/Hikvision-Logo.webp' },
+      { name: 'CP Plus', logo: '/cpplus_logo.webp' },
+      { name: 'Dahua Technology', logo: '/dahua_logo.webp' },
+      { name: 'UNV (Uniview)', logo: '/uniview_logo.webp' },
+      { name: 'Prama', logo: '/prama_logo.webp' },
+      { name: 'High Focus', logo: '/highfocus_logo.webp' },
     ],
     images: [
-      '/CCTV1.PNG',
-      '/CCTV2.PNG'
+      '/CCTV1.webp',
+      '/CCTV2.webp'
     ],
     reviews: [
       { id: 'c1', name: 'Vikas D.', initial: 'V', text: 'Top tier security systems. The cameras are clear even at night. Feel much safer now.' },
@@ -139,14 +139,14 @@ const servicesData = [
   {
     id: 'inverters',
     title: 'Inverters and Batteries',
-    wallpaper: '/Inverters_wallpaper.PNG',
+    wallpaper: '/Inverters_wallpaper.webp',
     icon: <Zap size={32} />,
     tags: ['Installation', 'Service', 'Sales'],
     shortDesc: 'Reliable power backup solutions to ensure uninterrupted workflow.',
     longDesc: 'Never experience a blackout again. Digibytz provides robust inverter solutions tailored to both residential and commercial needs. We supply top-brand inverters, ensure safe professional installation, and provide necessary regular maintenance for peak performance.',
     images: [
-      '/inverter1.png',
-      '/inverter2.jpg'
+      '/inverter1.webp',
+      '/inverter2.webp'
     ],
     reviews: [
       { id: 'i1', name: 'Deepak S.', initial: 'D', text: 'Finally, no more power cuts disrupting work. The inverter unit they suggested works flawlessly.' },
@@ -158,7 +158,7 @@ const servicesData = [
   {
     id: 'computers',
     title: 'PCs & Laptops',
-    wallpaper: '/PCs & Laptops_wallpaper.jpg',
+    wallpaper: '/PCs & Laptops_wallpaper.webp',
     icon: <Laptop size={32} />,
     tags: ['Installation', 'Sales', 'Service'],
     shortDesc: 'High-performance laptops, desktops, and custom assembled PCs.',
@@ -167,38 +167,38 @@ const servicesData = [
       {
         title: 'Laptops (Gaming & Workspace)',
         desc: 'High-performance laptops for professional work and gaming. Portable, powerful, and equipped with top-tier graphics.',
-        img: '/laptop_gaming_workspace.png',
+        img: '/laptop_gaming_workspace.webp',
         brands: [
-          { name: 'Lenovo', logo: '/lenovo_logo.png', desc: 'Legion and ThinkPad series for build quality and performance.' },
-          { name: 'ASUS', logo: '/asus_logo.png', desc: 'ROG and VivoBook lineups for cutting-edge power and aesthetics.' },
-          { name: 'MSI', logo: '/mis_logo.png', desc: 'Premium gaming laptops built for raw speed and thermal efficiency.' },
-          { name: 'DELL', logo: '/dell_logo.png', desc: 'XPS and Alienware series for professional and gaming excellence.' },
-          { name: 'HP', logo: '/hp_logo.png', desc: 'Spectre and OMEN lineups balancing design with powerful internals.' },
-          { name: 'Acer', logo: '/acer_logo.png', desc: 'Predator and Swift series offering great value and technology.' }
+          { name: 'Lenovo', logo: '/lenovo_logo.webp', desc: 'Legion and ThinkPad series for build quality and performance.' },
+          { name: 'ASUS', logo: '/asus_logo.webp', desc: 'ROG and VivoBook lineups for cutting-edge power and aesthetics.' },
+          { name: 'MSI', logo: '/mis_logo.webp', desc: 'Premium gaming laptops built for raw speed and thermal efficiency.' },
+          { name: 'DELL', logo: '/dell_logo.webp', desc: 'XPS and Alienware series for professional and gaming excellence.' },
+          { name: 'HP', logo: '/hp_logo.webp', desc: 'Spectre and OMEN lineups balancing design with powerful internals.' },
+          { name: 'Acer', logo: '/acer_logo.webp', desc: 'Predator and Swift series offering great value and technology.' }
         ]
       },
       {
         title: 'Desktops',
         desc: 'Reliable desktop solutions for business and home. Built for consistent performance and easy upgradability.',
-        img: '/desktop_pc.png',
+        img: '/desktop_pc.webp',
         brands: [
-          { name: 'Lenovo', logo: '/lenovo_logo.png', desc: 'ThinkCentre towers offering rock-solid office reliability.' },
-          { name: 'ASUS', logo: '/asus_logo.png', desc: 'ProArt and ROG desktops for creative work and gaming.' },
-          { name: 'DELL', logo: '/dell_logo.png', desc: 'OptiPlex and Inspiron series, the standard for business computing.' },
-          { name: 'HP', logo: '/hp_logo.png', desc: 'EliteDesk and Pavilion towers for productivity and power.' },
-          { name: 'Acer', logo: '/acer_logo.png', desc: 'Aspire and Veriton desktops providing dependable daily performance.' }
+          { name: 'Lenovo', logo: '/lenovo_logo.webp', desc: 'ThinkCentre towers offering rock-solid office reliability.' },
+          { name: 'ASUS', logo: '/asus_logo.webp', desc: 'ProArt and ROG desktops for creative work and gaming.' },
+          { name: 'DELL', logo: '/dell_logo.webp', desc: 'OptiPlex and Inspiron series, the standard for business computing.' },
+          { name: 'HP', logo: '/hp_logo.webp', desc: 'EliteDesk and Pavilion towers for productivity and power.' },
+          { name: 'Acer', logo: '/acer_logo.webp', desc: 'Aspire and Veriton desktops providing dependable daily performance.' }
         ]
       },
       {
         title: 'All-in-One PCs',
         desc: 'Sleek, space-saving solutions for modern offices. Monitor and PC integrated into one clutter-free design.',
-        img: '/all_in_one_pc.png',
+        img: '/all_in_one_pc.webp',
         brands: [
-          { name: 'Lenovo', logo: '/lenovo_logo.png', desc: 'IdeaCentre AIO series with sharp displays and efficient internals.' },
-          { name: 'ASUS', logo: '/asus_logo.png', desc: 'Zen AiO models featuring premium design and performance.' },
-          { name: 'DELL', logo: '/dell_logo.png', desc: 'Inspiron AIOs offering a seamless desktop experience.' },
-          { name: 'HP', logo: '/hp_logo.png', desc: 'Pavilion and Envy AIOs for home and professional creative use.' },
-          { name: 'Acer', logo: '/acer_logo.png', desc: 'Aspire C series providing slim designs and reliable performance.' }
+          { name: 'Lenovo', logo: '/lenovo_logo.webp', desc: 'IdeaCentre AIO series with sharp displays and efficient internals.' },
+          { name: 'ASUS', logo: '/asus_logo.webp', desc: 'Zen AiO models featuring premium design and performance.' },
+          { name: 'DELL', logo: '/dell_logo.webp', desc: 'Inspiron AIOs offering a seamless desktop experience.' },
+          { name: 'HP', logo: '/hp_logo.webp', desc: 'Pavilion and Envy AIOs for home and professional creative use.' },
+          { name: 'Acer', logo: '/acer_logo.webp', desc: 'Aspire C series providing slim designs and reliable performance.' }
         ]
       },
       {
@@ -219,7 +219,7 @@ const servicesData = [
   {
     id: 'it-surveillance',
     title: 'Comprehensive IT & Surveillance Services',
-    wallpaper: '/Comprehensive IT & Surveillance Services_wallpaper.jpg',
+    wallpaper: '/Comprehensive IT & Surveillance Services_wallpaper.webp',
     icon: <Wrench size={32} />,
     tags: ['Infrastructure', 'Hardware', 'Security'],
     shortDesc: 'End-to-end solutions for hardware, security, and network infrastructure.',
@@ -282,9 +282,9 @@ const reviewsData = [
 ];
 
 const brandLogos = [
-  '/acer_logo.png', '/asus_logo.png', '/cpplus_logo.png', '/dahua_logo.png',
-  '/dell_logo.png', '/highfocus_logo.png', '/hp_logo.png', '/lenovo_logo.png',
-  '/mis_logo.png', '/prama_logo', '/uniview_logo.png', '/Hikvision-Logo.png'
+  '/acer_logo.webp', '/asus_logo.webp', '/cpplus_logo.webp', '/dahua_logo.webp',
+  '/dell_logo.webp', '/highfocus_logo.webp', '/hp_logo.webp', '/lenovo_logo.webp',
+  '/mis_logo.webp', '/prama_logo.webp', '/uniview_logo.webp', '/Hikvision-Logo.webp'
 ];
 
 function App() {
@@ -364,8 +364,8 @@ function App() {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container">
           <a href="#home" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-            <img src="/Logo.png" alt="Digibytz Logo" style={{ height: '60px', width: 'auto' }} />
-            <img src="/Name.png" alt="Digibytz" style={{ height: '28px', width: 'auto' }} />
+            <img src="/Logo.webp" alt="Digibytz Logo" style={{ height: '60px', width: 'auto' }} />
+            <img src="/Name.webp" alt="Digibytz" style={{ height: '28px', width: 'auto' }} />
           </a>
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
@@ -813,7 +813,7 @@ function App() {
                         key={idx} 
                         src={img} 
                         alt={`${activeService.title} product example`} 
-                        style={img.includes('inverter1.png') ? { objectPosition: 'center 25%' } : {}}
+                        style={img.includes('inverter1.webp') ? { objectPosition: 'center 25%' } : {}}
                       />
                     ))}
                   </div>
@@ -968,7 +968,7 @@ function App() {
       <section className="section container" style={{ paddingTop: '2rem', paddingBottom: '6rem' }}>
         <div className="animate-on-scroll" style={{ maxWidth: '1000px', margin: '0 auto', borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', position: 'relative' }}>
           <img 
-            src="/TeamDigibytz.jpeg" 
+            src="/TeamDigibytz.webp" 
             alt="The Digibytz Team" 
             style={{ width: '100%', height: 'auto', display: 'block', transition: 'transform 0.5s ease' }} 
             onMouseEnter={(e) => e.target.style.transform = 'scale(1.03)'}
@@ -985,8 +985,8 @@ function App() {
       <footer id="contact">
         <div className="container footer-content">
           <a href="#home" className="footer-logo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.8rem' }}>
-            <img src="/Logo.png" alt="Digibytz Logo" style={{ height: '72px', width: 'auto' }} />
-            <img src="/Name.png" alt="Digibytz" style={{ height: '32px', width: 'auto' }} />
+            <img src="/Logo.webp" alt="Digibytz Logo" style={{ height: '72px', width: 'auto' }} />
+            <img src="/Name.webp" alt="Digibytz" style={{ height: '32px', width: 'auto' }} />
           </a>
           <p className="footer-text">
             Based in Coimbatore🌏, bringing you premium solutions in sustainable energy, uncompromising security, and high-performance computing.
