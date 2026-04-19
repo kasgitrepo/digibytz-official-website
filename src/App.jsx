@@ -12,6 +12,8 @@ const servicesData = [
   {
     id: 'solar',
     title: 'Solar Panels',
+    phone: '9600397776',
+    formattedPhone: '+91-96003 97776',
     wallpaper: '/Solar Panels_wallpaper.webp',
     icon: <Sun size={32} />,
     tags: ['Installation', 'Service', 'Sales'],
@@ -97,6 +99,8 @@ const servicesData = [
   {
     id: 'cctv',
     title: 'Security Solutions - CCTV',
+    phone: '9150010664',
+    formattedPhone: '+91-91500 10664',
     wallpaper: '/Security Solutions - CCTV_wallpaper.webp',
     icon: <Shield size={32} />,
     tags: ['Installation', 'Service', 'Sales'],
@@ -139,6 +143,8 @@ const servicesData = [
   {
     id: 'inverters',
     title: 'Inverters and Batteries',
+    phone: '9600397775',
+    formattedPhone: '+91-96003 97775',
     wallpaper: '/Inverters_wallpaper.webp',
     icon: <Zap size={32} />,
     tags: ['Installation', 'Service', 'Sales'],
@@ -158,6 +164,8 @@ const servicesData = [
   {
     id: 'computers',
     title: 'PCs & Laptops',
+    phone: '9150011907',
+    formattedPhone: '+91-91500 11907',
     wallpaper: '/PCs & Laptops_wallpaper.webp',
     icon: <Laptop size={32} />,
     tags: ['Installation', 'Sales', 'Service'],
@@ -219,6 +227,8 @@ const servicesData = [
   {
     id: 'it-surveillance',
     title: 'Comprehensive IT & Surveillance Services',
+    phone: '8098950005',
+    formattedPhone: '+91-80989 50005',
     wallpaper: '/Comprehensive IT & Surveillance Services_wallpaper.webp',
     icon: <Wrench size={32} />,
     tags: ['Infrastructure', 'Hardware', 'Security'],
@@ -228,27 +238,32 @@ const servicesData = [
       {
         title: 'Computing Solutions',
         icon: <Monitor className="text-brand-green" size={32} />,
-        desc: 'Branded desktops, custom-built systems, workstations, and servers. All branded laptops and high-performance workstation laptops.'
+        desc: 'Branded desktops, custom-built systems, workstations, and servers. All branded laptops and high-performance workstation laptops.',
+        img: '/computing_solutions.webp'
       },
       {
         title: 'Chip-Level Repairs',
         icon: <Cpu className="text-brand-green" size={32} />,
-        desc: 'Advanced motherboard repair services for Desktop & Laptop motherboards, DVR systems, and NVR systems.'
+        desc: 'Advanced motherboard repair services for Desktop & Laptop motherboards, DVR systems, and NVR systems.',
+        img: '/chip-level_repairs.webp'
       },
       {
         title: 'Printing Solutions',
         icon: <Printer className="text-brand-green" size={32} />,
-        desc: 'Complete support for Laser, Inkjet & Dot Matrix printers, sticker printers, cartridge refilling, and systematic maintenance.'
+        desc: 'Complete support for Laser, Inkjet & Dot Matrix printers, sticker printers, cartridge refilling, and systematic maintenance.',
+        img: '/printing_soutions.webp'
       },
       {
         title: 'Surveillance Systems',
         icon: <Video className="text-brand-green" size={32} />,
-        desc: 'End-to-end CCTV: Analog, HD, IP & Hybrid systems, plus solar-powered and WiFi cameras with full installation.'
+        desc: 'End-to-end CCTV: Analog, HD, IP & Hybrid systems, plus solar-powered and WiFi cameras with full installation.',
+        img: '/surveillance_solutions.webp'
       },
       {
         title: 'Networking & Security',
         icon: <Globe className="text-brand-green" size={32} />,
-        desc: 'Robust infrastructure with managed/unmanaged switches, routers, access points, firewalls, and cloud storage integration.'
+        desc: 'Robust infrastructure with managed/unmanaged switches, routers, access points, firewalls, and cloud storage integration.',
+        img: '/networking_&_security.webp'
       }
     ],
     customCTA: {
@@ -259,6 +274,34 @@ const servicesData = [
     images: []
   }
 ];
+
+const Instagram = ({ size = 24, ...props }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
+
+const Linkedin = ({ size = 24, ...props }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+);
+
+const Facebook = ({ size = 24, ...props }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+  </svg>
+);
+
+const Twitter = ({ size = 24, ...props }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+  </svg>
+);
 
 const reviewsData = [
   {
@@ -630,23 +673,26 @@ function App() {
                           key={idx}
                           className="category-card"
                           style={{
-                            background: 'var(--bg-card)',
-                            border: '1px solid rgba(255,255,255,0.05)',
-                            padding: '2rem',
+                            position: 'relative',
                             borderRadius: '20px',
-                            textAlign: 'left',
+                            overflow: 'hidden',
+                            minHeight: '280px',
                             display: 'flex',
                             flexDirection: 'column',
-                            gap: '1rem',
+                            justifyContent: 'flex-end',
+                            background: `url("${cat.img}") center/cover no-repeat`,
                             boxShadow: '0 8px 30px rgba(0,0,0,0.2)',
-                            transition: 'all 0.3s ease'
+                            transition: 'transform 0.3s ease, box-shadow 0.3s ease'
                           }}
                         >
-                          <div style={{ background: 'rgba(16,185,129,0.1)', width: '60px', height: '60px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            {cat.icon}
+                          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.3) 100%)' }}></div>
+                          <div style={{ position: 'relative', zIndex: 1, padding: '2rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                            <div style={{ background: 'rgba(16,185,129,0.25)', width: '50px', height: '50px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(5px)', border: '1px solid rgba(16,185,129,0.3)' }}>
+                              {cat.icon}
+                            </div>
+                            <h3 style={{ fontSize: '1.3rem', fontFamily: 'var(--font-heading)', color: 'white', margin: '0.5rem 0 0' }}>{cat.title}</h3>
+                            <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: '1.6', margin: 0 }}>{cat.desc}</p>
                           </div>
-                          <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-heading)', color: 'white' }}>{cat.title}</h3>
-                          <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>{cat.desc}</p>
                         </div>
                       ))}
                     </div>
@@ -820,8 +866,8 @@ function App() {
                 )}
 
                 <div className="modal-cta">
-                  <a href="tel:+910000000000" className="btn-primary">
-                    <Phone size={20} /> Call for Booking
+                  <a href={`tel:+91${activeService.phone}`} className="btn-primary">
+                    <Phone size={20} /> Call for Booking ({activeService.formattedPhone})
                   </a>
                   <a href="mailto:info@digibytz.com" className="btn-secondary">
                     <Mail size={20} /> Request a Quote
@@ -991,9 +1037,11 @@ function App() {
           <p className="footer-text">
             Based in Coimbatore🌏, bringing you premium solutions in sustainable energy, uncompromising security, and high-performance computing.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
-            <a href="tel:+910000000000" style={{ color: 'var(--text-muted)' }}><Phone /></a>
-            <a href="mailto:info@digibytz.com" style={{ color: 'var(--text-muted)' }}><Mail /></a>
+          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', marginBottom: '2rem' }}>
+            <a href="https://www.instagram.com/digibytz/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = '#e1306c'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}><Instagram size={24} /></a>
+            <a href="https://www.linkedin.com/company/digibytz/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = '#0077b5'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}><Linkedin size={24} /></a>
+            <a href="https://www.facebook.com/digibytz" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = '#1877f2'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}><Facebook size={24} /></a>
+            <a href="https://x.com/Digibytzdigital" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = '#1da1f2'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}><Twitter size={24} /></a>
           </div>
           <div className="copyright">
             &copy; {new Date().getFullYear()} Digibytz Digital. All rights reserved.
