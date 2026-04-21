@@ -5,7 +5,7 @@ import {
   PiggyBank, TrendingUp, Landmark, Banknote,
   Leaf, Settings, Award, ThumbsUp, Users, MapPin,
   Cpu, MessageSquare, Search, FileText, Wrench,
-  Monitor, Printer, Video, Globe
+  Monitor, Printer, Video, Globe, ChevronDown
 } from 'lucide-react';
 
 const servicesData = [
@@ -324,6 +324,45 @@ const reviewsData = [
   }
 ];
 
+const faqData = [
+  {
+    id: 1,
+    question: "Do you offer government subsidies for solar panel installations?",
+    answer: "Yes, we assist our residential customers in applying for the PM Surya Ghar Muft Bijli Yojana and other state-specific subsidies. Our team handles the documentation and technical compliance required to ensure you get the maximum benefit.",
+    category: "Solar"
+  },
+  {
+    id: 2,
+    question: "Can I monitor my CCTV cameras remotely from anywhere?",
+    answer: "Absolutely. All our modern CCTV systems (IP and HD-Analog) come with secure mobile app integration. Once installed, you can view live footage and playback recordings from your smartphone or tablet anywhere in the world with an internet connection.",
+    category: "CCTV"
+  },
+  {
+    id: 3,
+    question: "How do I choose the right inverter capacity for my home?",
+    answer: "Inverter capacity depends on your total 'peak load' (what you run at once) and desired 'backup time'. Our experts conduct a free load calculation during our site visit to recommend the perfect combination of inverter KVA and battery AH for your needs.",
+    category: "Backup"
+  },
+  {
+    id: 4,
+    question: "Do you provide custom-built PCs for specific professional work?",
+    answer: "Yes, we specialize in building high-performance workstations tailored for 3D rendering, video editing, and competitive gaming. We hand-pick components (CPUs, GPUs, RAM) to match your workflow and budget perfectly.",
+    category: "IT"
+  },
+  {
+    id: 5,
+    question: "What kind of maintenance is required for solar panels?",
+    answer: "Solar panels require minimal maintenance. We recommend cleaning the panels with plain water every 2 weeks to remove dust. Additionally, we provide professional preventive maintenance every 4 months for the first 5 years to check wiring and inverter health.",
+    category: "Solar"
+  },
+  {
+    id: 6,
+    question: "Do you offer doorstep service for laptop and PC repairs?",
+    answer: "Yes, we provide on-site repair services across Coimbatore for software issues and basic hardware part replacements. For complex chip-level repairs, we offer safe pickup and delivery to our specialized service center.",
+    category: "Service"
+  }
+];
+
 const brandLogos = [
   '/acer_logo.webp', '/asus_logo.webp', '/cpplus_logo.webp', '/dahua_logo.webp',
   '/dell_logo.webp', '/highfocus_logo.webp', '/hp_logo.webp', '/lenovo_logo.webp',
@@ -332,6 +371,7 @@ const brandLogos = [
 
 function App() {
   const [activeService, setActiveService] = useState(null);
+  const [activeFaq, setActiveFaq] = useState(null);
   const [scrolled, setScrolled] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -414,6 +454,7 @@ function App() {
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#quote" className="btn-primary" style={{ padding: '0.5rem 1rem' }}>Get quote</a></li>
           </ul>
         </div>
@@ -453,20 +494,20 @@ function App() {
 
           <div className="hero-stats">
             <div className="stat-item">
-              <h3 className="reveal-word" style={{animationDelay: '1.4s'}}>10,000+</h3>
-              <p className="reveal-word" style={{animationDelay: '1.5s', display: 'block'}}>Happy Clients</p>
+              <h3 className="reveal-word" style={{ animationDelay: '1.4s' }}>10,000+</h3>
+              <p className="reveal-word" style={{ animationDelay: '1.5s', display: 'block' }}>Happy Clients</p>
             </div>
             <div className="stat-item">
-              <h3 className="reveal-word" style={{animationDelay: '1.6s'}}>18+ years</h3>
-              <p className="reveal-word" style={{animationDelay: '1.7s', display: 'block'}}>Experience</p>
+              <h3 className="reveal-word" style={{ animationDelay: '1.6s' }}>18+ years</h3>
+              <p className="reveal-word" style={{ animationDelay: '1.7s', display: 'block' }}>Experience</p>
             </div>
             <div className="stat-item">
-              <h3 className="reveal-word" style={{animationDelay: '1.8s'}}>1,000+</h3>
-              <p className="reveal-word" style={{animationDelay: '1.9s', display: 'block'}}>Partners</p>
+              <h3 className="reveal-word" style={{ animationDelay: '1.8s' }}>1,000+</h3>
+              <p className="reveal-word" style={{ animationDelay: '1.9s', display: 'block' }}>Partners</p>
             </div>
             <div className="stat-item">
-              <h3 className="reveal-word" style={{animationDelay: '2.0s'}}>5</h3>
-              <p className="reveal-word" style={{animationDelay: '2.1s', display: 'block'}}>Core Services</p>
+              <h3 className="reveal-word" style={{ animationDelay: '2.0s' }}>5</h3>
+              <p className="reveal-word" style={{ animationDelay: '2.1s', display: 'block' }}>Core Services</p>
             </div>
           </div>
         </div>
@@ -474,11 +515,11 @@ function App() {
 
       {/* Brands Marquee */}
       <section className="marquee-container">
-         <div className="marquee-content">
-            {brandLogos.map((logo, idx) => <img key={`orig-${idx}`} src={logo} alt="Brand Logo" className="marquee-logo" />)}
-            {/* Duplicated for seamless continuous scroll */}
-            {brandLogos.map((logo, idx) => <img key={`dup-${idx}`} src={logo} alt="Brand Logo" className="marquee-logo" />)}
-         </div>
+        <div className="marquee-content">
+          {brandLogos.map((logo, idx) => <img key={`orig-${idx}`} src={logo} alt="Brand Logo" className="marquee-logo" />)}
+          {/* Duplicated for seamless continuous scroll */}
+          {brandLogos.map((logo, idx) => <img key={`dup-${idx}`} src={logo} alt="Brand Logo" className="marquee-logo" />)}
+        </div>
       </section>
 
       {/* Services Section */}
@@ -509,7 +550,7 @@ function App() {
                   ))}
                 </div>
                 <p className="service-desc">{service.shortDesc}</p>
-  
+
                 <div className="service-link" style={{ marginTop: 'auto' }}>
                   View Details <ArrowRight size={16} />
                 </div>
@@ -584,12 +625,12 @@ function App() {
                         <div
                           key={idx}
                           className="category-card"
-                          style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', minHeight: '380px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', background: `url(${cat.img}) center/cover no-repeat`, boxShadow: '0 0 0 4px var(--bg-dark), 0 8px 32px rgba(0,0,0,0.5)' }}
+                          style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', minHeight: activeService.id === 'solar' ? '550px' : '380px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', background: `url(${cat.img}) center/cover no-repeat`, boxShadow: '0 0 0 4px var(--bg-dark), 0 8px 32px rgba(0,0,0,0.5)' }}
                         >
-                          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.1) 100%)' }}></div>
-                          <div style={{ position: 'relative', zIndex: 1, padding: '1.8rem 1.5rem' }}>
-                            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: 'white', textAlign: 'center', marginBottom: '0.8rem' }}>{cat.title}</h3>
-                            <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: '#e2e8f0', lineHeight: '1.6', marginBottom: cat.brands ? '1.2rem' : '0' }}>{cat.desc}</p>
+                          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,0.1) 100%)' }}></div>
+                          <div style={{ position: 'relative', zIndex: 1, padding: '1.8rem 1.5rem', height: activeService.id === 'solar' ? '360px' : 'auto', minHeight: activeService.id === 'solar' ? '360px' : '0', display: 'flex', flexDirection: 'column' }}>
+                            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: 'white', textAlign: 'center', marginBottom: '0.8rem', height: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{cat.title}</h3>
+                            <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: '#e2e8f0', lineHeight: '1.6', marginBottom: cat.brands ? '1.2rem' : '0', flexGrow: 1 }}>{cat.desc}</p>
                             {cat.brands && (
                               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '1rem' }}>
                                 {cat.brands.map((brand, bIdx) => (
@@ -855,10 +896,10 @@ function App() {
                 {activeService.images && activeService.images.length > 0 && (
                   <div className="modal-image-grid" style={{ marginTop: '4rem' }}>
                     {activeService.images.map((img, idx) => (
-                      <img 
-                        key={idx} 
-                        src={img} 
-                        alt={`${activeService.title} product example`} 
+                      <img
+                        key={idx}
+                        src={img}
+                        alt={`${activeService.title} product example`}
                         style={img.includes('inverter1.webp') ? { objectPosition: 'center 25%' } : {}}
                       />
                     ))}
@@ -926,50 +967,50 @@ function App() {
             </div>
           ) : (
             <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }} onSubmit={handleFormSubmit}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="name" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Name</label>
-              <input type="text" id="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name" required style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="email" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Email</label>
-              <input type="email" id="email" value={formData.email} onChange={handleInputChange} placeholder="Your Email Address" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Please enter a valid email address." style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="phone" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Phone</label>
-              <input type="tel" id="phone" value={formData.phone} onChange={handleInputChange} placeholder="Your Phone Number (10 digits)" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number." style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="location" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Location</label>
-              <input type="text" id="location" value={formData.location} onChange={handleInputChange} placeholder="Your City or Setup Location" required style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="service" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Select Service</label>
-              <select id="service" value={formData.service} onChange={handleInputChange} required style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s', cursor: 'pointer', appearance: 'none' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}>
-                <option value="" disabled>Select a Service</option>
-                <option value="solar">Solar Panels</option>
-                <option value="cctv">Security Solutions - CCTV</option>
-                <option value="inverters">Inverters and Batteries</option>
-                <option value="computers">PCs &amp; Laptops</option>
-                <option value="it">IT &amp; Surveillance</option>
-              </select>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="message" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Message</label>
-              <textarea id="message" value={formData.message} onChange={handleInputChange} rows="4" placeholder="How can we help?" required style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s', resize: 'vertical' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}></textarea>
-            </div>
-
-
-
-            {formStatus === 'error' && (
-              <div style={{ padding: '1rem', background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', borderRadius: '12px', border: '1px solid rgba(239, 68, 68, 0.2)', textAlign: 'center', fontFamily: 'var(--font-body)', fontSize: '0.95rem' }}>
-                Oops! Something went wrong. Please try again or contact us directly.
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <label htmlFor="name" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Name</label>
+                <input type="text" id="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name" required style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
               </div>
-            )}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <label htmlFor="email" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Email</label>
+                <input type="email" id="email" value={formData.email} onChange={handleInputChange} placeholder="Your Email Address" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Please enter a valid email address." style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <label htmlFor="phone" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Phone</label>
+                <input type="tel" id="phone" value={formData.phone} onChange={handleInputChange} placeholder="Your Phone Number (10 digits)" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number." style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <label htmlFor="location" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Location</label>
+                <input type="text" id="location" value={formData.location} onChange={handleInputChange} placeholder="Your City or Setup Location" required style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <label htmlFor="service" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Select Service</label>
+                <select id="service" value={formData.service} onChange={handleInputChange} required style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s', cursor: 'pointer', appearance: 'none' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}>
+                  <option value="" disabled>Select a Service</option>
+                  <option value="solar">Solar Panels</option>
+                  <option value="cctv">Security Solutions - CCTV</option>
+                  <option value="inverters">Inverters and Batteries</option>
+                  <option value="computers">PCs &amp; Laptops</option>
+                  <option value="it">IT &amp; Surveillance</option>
+                </select>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <label htmlFor="message" style={{ color: 'var(--text-light)', fontSize: '0.9rem', fontWeight: '500', fontFamily: 'var(--font-heading)' }}>Message</label>
+                <textarea id="message" value={formData.message} onChange={handleInputChange} rows="4" placeholder="How can we help?" required style={{ fontFamily: 'var(--font-body)', padding: '0.8rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', background: 'var(--bg-dark)', color: 'white', outline: 'none', transition: 'border-color 0.3s', resize: 'vertical' }} onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}></textarea>
+              </div>
 
-            <button type="submit" disabled={formStatus === 'submitting'} className="btn-primary" style={{ justifyContent: 'center', marginTop: '0.5rem', padding: '1rem', borderRadius: '12px', fontSize: '1.1rem', cursor: formStatus === 'submitting' ? 'not-allowed' : 'pointer', opacity: formStatus === 'submitting' ? 0.7 : 1 }}>
-              {formStatus === 'submitting' ? 'Submitting...' : 'Submit Request'}
-            </button>
-          </form>
+
+
+              {formStatus === 'error' && (
+                <div style={{ padding: '1rem', background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', borderRadius: '12px', border: '1px solid rgba(239, 68, 68, 0.2)', textAlign: 'center', fontFamily: 'var(--font-body)', fontSize: '0.95rem' }}>
+                  Oops! Something went wrong. Please try again or contact us directly.
+                </div>
+              )}
+
+              <button type="submit" disabled={formStatus === 'submitting'} className="btn-primary" style={{ justifyContent: 'center', marginTop: '0.5rem', padding: '1rem', borderRadius: '12px', fontSize: '1.1rem', cursor: formStatus === 'submitting' ? 'not-allowed' : 'pointer', opacity: formStatus === 'submitting' ? 0.7 : 1 }}>
+                {formStatus === 'submitting' ? 'Submitting...' : 'Submit Request'}
+              </button>
+            </form>
           )}
         </div>
 
@@ -1011,12 +1052,12 @@ function App() {
       </section>
 
       {/* Team Photo Section */}
-      <section className="section container" style={{ paddingTop: '2rem', paddingBottom: '6rem' }}>
+      <section className="section container" style={{ paddingTop: '2rem', paddingBottom: '3rem' }}>
         <div className="animate-on-scroll" style={{ maxWidth: '1000px', margin: '0 auto', borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', position: 'relative' }}>
-          <img 
-            src="/TeamDigibytz.webp" 
-            alt="The Digibytz Team" 
-            style={{ width: '100%', height: 'auto', display: 'block', transition: 'transform 0.5s ease' }} 
+          <img
+            src="/TeamDigibytz.webp"
+            alt="The Digibytz Team"
+            style={{ width: '100%', height: 'auto', display: 'block', transition: 'transform 0.5s ease' }}
             onMouseEnter={(e) => e.target.style.transform = 'scale(1.03)'}
             onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
           />
@@ -1024,6 +1065,75 @@ function App() {
             <h3 style={{ color: 'white', fontFamily: 'var(--font-heading)', fontSize: '1.8rem', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Meet the Digibytz Team</h3>
             <p style={{ color: 'var(--color-primary)', fontWeight: '600', textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>Dedicated to your success in Coimbatore</p>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="section container" style={{ paddingTop: '3rem', paddingBottom: '6rem' }}>
+        <h2 className="section-title">
+          <span className="animate-on-scroll">Frequently&nbsp;</span>
+          <span className="animate-on-scroll delay-100">Asked&nbsp;</span>
+          <span className="text-gradient animate-on-scroll delay-200">Questions</span>
+        </h2>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          {faqData.map((faq, index) => (
+            <div
+              key={faq.id}
+              className={`faq-item ${activeFaq === faq.id ? 'active' : ''}`}
+              style={{
+                marginBottom: '1rem',
+                borderRadius: '16px',
+                background: 'var(--bg-card)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                overflow: 'hidden',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <button
+                onClick={() => setActiveFaq(activeFaq === faq.id ? null : faq.id)}
+                style={{
+                  width: '100%',
+                  padding: '1.5rem 2rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  background: 'transparent',
+                  textAlign: 'left',
+                  color: '#FFFFFF',
+                  cursor: 'pointer',
+                  border: 'none',
+                  outline: 'none'
+                }}
+              >
+                <span style={{ fontSize: '1.15rem', fontWeight: '700', fontFamily: 'var(--font-heading)', color: '#FFFFFF' }}>{faq.question}</span>
+                <ChevronDown
+                  size={24}
+                  style={{
+                    transition: 'transform 0.4s ease',
+                    transform: activeFaq === faq.id ? 'rotate(180deg)' : 'rotate(0)',
+                    color: 'var(--color-primary)',
+                    flexShrink: 0
+                  }}
+                />
+              </button>
+              <div
+                style={{
+                  maxHeight: activeFaq === faq.id ? '1000px' : '0',
+                  opacity: activeFaq === faq.id ? 1 : 0,
+                  visibility: activeFaq === faq.id ? 'visible' : 'hidden',
+                  overflow: 'hidden',
+                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                  padding: activeFaq === faq.id ? '0 2rem 2.5rem' : '0 2rem'
+                }}
+              >
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem' }}>
+                  <p style={{ color: '#E2E8F0', fontSize: '1.05rem', lineHeight: '1.8' }}>
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

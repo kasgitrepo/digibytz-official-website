@@ -644,9 +644,23 @@ html {
   }
 }
 
-/* Category Cards */
-.category-card {
-  transition: box-shadow 0.3s ease, border 0.3s ease;
+/* FAQ Items */
+.faq-item {
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  border-color: var(--color-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item.active {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+.faq-item button:hover {
+  color: var(--color-primary) !important;
 }
 
 .contact-row {
