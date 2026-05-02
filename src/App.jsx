@@ -150,6 +150,40 @@ const servicesData = [
     tags: ['Installation', 'Service', 'Sales'],
     shortDesc: 'Reliable power backup solutions to ensure uninterrupted workflow.',
     longDesc: 'Never experience a blackout again. Digibytz provides robust inverter solutions tailored to both residential and commercial needs. We supply top-brand inverters, ensure safe professional installation, and provide necessary regular maintenance for peak performance.',
+    highlight: 'V-Guard Authorized Distributer in Coimbatore',
+    segments: [
+      { name: 'Commercial', icon: <Landmark className="text-brand-green" size={28} /> },
+      { name: 'Domestic', icon: <Users className="text-brand-green" size={28} /> }
+    ],
+    types: [
+      {
+        name: 'On-Grid',
+        desc: 'Connected to the utility grid, ideal for reducing electricity bills by exporting excess energy.',
+        img: '/on-grid_label.webp'
+      },
+      {
+        name: 'Off-grid',
+        desc: 'Independent systems with battery backup, perfect for power-cut prone areas and energy independence.',
+        img: '/off-grid_label.webp',
+        subType: 'OFF-GRID HYBRID SOLAR INVERTER',
+        subDesc: "V-Guard’s solar off-grid systems with batteries are made to work effectively and last for years to come. Leading-edge technology has enabled us to make this product combination function impressively and smoothly for a very long time. Designed with utmost attention to detail and functionality, they will generate enough power throughout the years. The battery capacity can meet many requirements, even during winter when there is generally much less sunlight.",
+        series: [
+          {
+            name: 'SOLSMART SERIES',
+            desc: 'V-Guard Smart Series of Solar Hybrid Solar Inverter is an innovation marvel of the solar industry. The V-Guard Smart Solar Inverter Series has many advanced features that you can control through your mobile phone with the V-Guard Smart app.', // I'll rename the generated image to this or use the actual path
+            features: [
+              'Turbo Charger', 'Mute', 'Complaint Registration', 'Heavy Load Handling',
+              'User Selectable High Performance / Long Backup', 'Solar + Grid Charging, with solar priority',
+              'On / Off', 'QR Code', 'Holiday Mode', 'Battery Water Topping Reminder'
+            ]
+          },
+          {
+            name: 'NEXTGEN SERIES',
+            desc: 'The Nextgen series offers reliable power backup for medium to large homes, ensuring high-efficiency conversion and long battery life with intelligent charging technology.'
+          }
+        ]
+      }
+    ],
     images: [
       '/inverter1.webp',
       '/inverter2.webp'
@@ -617,6 +651,80 @@ function App() {
                 <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
                   {activeService.longDesc}
                 </p>
+
+                {activeService.highlight && (
+                  <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+                    <div className="inverter-highlight">
+                      {activeService.highlight}
+                    </div>
+                  </div>
+                )}
+
+                {activeService.segments && (
+                  <div style={{ marginTop: '3rem' }}>
+                    <h3 style={{ fontSize: '1.5rem', textAlign: 'center', marginBottom: '2rem', fontFamily: 'var(--font-heading)' }}>Segments We Serve</h3>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
+                      {activeService.segments.map((seg, idx) => (
+                        <div key={idx} className="segment-card">
+                          <div style={{ marginBottom: '1rem', color: 'var(--color-primary)' }}>{seg.icon}</div>
+                          <span style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--text-light)' }}>{seg.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {activeService.types && (
+                  <div style={{ marginTop: '4rem' }}>
+                    <h3 style={{ fontSize: '1.8rem', textAlign: 'center', marginBottom: '2.5rem', fontFamily: 'var(--font-heading)' }}>Our <span style={{ color: 'var(--color-secondary)' }}>Inverter Types</span></h3>
+                    <div className="responsive-modal-grid cols-2">
+                      {activeService.types.map((type, idx) => (
+                        <div key={idx} style={{ background: 'var(--bg-dark)', borderRadius: '20px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)', display: 'flex', flexDirection: 'column' }}>
+                          <img src={type.img} alt={type.name} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                          <div style={{ padding: '2rem', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                            <h4 style={{ fontSize: '1.4rem', color: 'var(--color-primary)', marginBottom: '0.8rem' }}>{type.name}</h4>
+                            <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: '1.6', marginBottom: '1.5rem' }}>{type.desc}</p>
+                            
+                            {type.subType && (
+                              <div style={{ marginTop: 'auto', paddingTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                                <span style={{ display: 'block', color: 'var(--color-secondary)', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>{type.subType}</span>
+                                <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.6', fontStyle: 'italic' }}>{type.subDesc}</p>
+                                
+                                {type.series && (
+                                  <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                                    {type.series.map((ser, sIdx) => (
+                                      <div key={sIdx}>
+                                        <h5 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                          <div style={{ width: '8px', height: '8px', background: 'var(--color-primary)', borderRadius: '50%' }}></div>
+                                          {ser.name}
+                                        </h5>
+                                        <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>{ser.desc}</p>
+                                        
+                                        {ser.features && (
+                                          <div className="app-showcase" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+                                            <p style={{ fontSize: '0.95rem', color: 'var(--color-accent)', fontWeight: '700', marginBottom: '1.25rem', letterSpacing: '0.02em', textTransform: 'uppercase' }}>Smart Control Features:</p>
+                                            <div className="feature-list-visual" style={{ width: '100%' }}>
+                                              {ser.features.map((feat, fIdx) => (
+                                                <div key={fIdx} className="feature-item-visual">
+                                                  <div className="feature-icon-bullet"></div>
+                                                  <span style={{ fontSize: '0.85rem', color: 'white' }}>{feat}</span>
+                                                </div>
+                                              ))}
+                                            </div>
+                                          </div>
+                                        )}
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {activeService.categories && (
                   <div style={{ marginTop: '2rem' }}>
